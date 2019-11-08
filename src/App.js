@@ -10,7 +10,8 @@ import './App.css';
 import TEMP_USER from './temp-data.js';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Dishes from './pages/AddDish';
+import AddDish from './pages/AddDish';
+import ViewDish from './pages/ViewDish';
 
 class App extends Component {
   render(){
@@ -24,7 +25,10 @@ class App extends Component {
                 <Home />
               </Route>
               <Route exact path="/add">
-                <Dishes />
+                <AddDish />
+              </Route>
+              <Route exact path="/:id">
+                <ViewDish />
               </Route>
             </Switch>
           </div>
