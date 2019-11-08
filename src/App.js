@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 import './App.css';
 
@@ -21,15 +22,9 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/add">
-                <AddDish />
-              </Route>
-              <Route exact path="/:id">
-                <ViewDish />
-              </Route>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/add" component={AddDish} />
+              <Route exact path="/dish/:id" component={ViewDish} />
             </Switch>
           </div>
         </Router>
